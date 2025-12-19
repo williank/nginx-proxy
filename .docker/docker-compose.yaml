@@ -10,7 +10,6 @@ services:
       - "80:80"
       - "443:443"
     volumes:
-
       - ./certs:/etc/nginx/certs:rw
       - ./vhost:/etc/nginx/vhost.d
       - ./html:/usr/share/nginx/html

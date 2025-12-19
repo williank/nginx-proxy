@@ -1,6 +1,5 @@
 .PHONY: help build up down logs restart clean ps
 
-COMPOSE=docker compose
 BASE_FILE=.docker/docker-compose.yaml
 OVERRIDE_FILE=.docker/docker-compose.custom.yaml
 
