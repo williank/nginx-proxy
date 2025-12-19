@@ -17,18 +17,18 @@ build:
 	docker build -t nginxproxy/nginx-proxy:custom -f .docker/Dockerfile .
 
 up:
-	docker compose -f $(BASE_FILE) up -d
+	docker compose -p nginx-proxy -f $(BASE_FILE) up -d
 
 down:
-	docker compose -f $(BASE_FILE) down
+	docker compose -p nginx-proxy -f $(BASE_FILE) down
 
 restart: down up
 
 logs:
-	docker compose -f $(BASE_FILE) logs -f
+	docker compose -p nginx-proxy -f $(BASE_FILE) logs -f
 
 ps:
-	docker compose -f $(BASE_FILE) ps
+	docker compose -p nginx-proxy -f $(BASE_FILE) ps
 
 clean:
-	docker compose -f $(BASE_FILE) down -v
+	docker compose -p nginx-proxy -f $(BASE_FILE) down -v
